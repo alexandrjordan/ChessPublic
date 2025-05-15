@@ -16,13 +16,16 @@ Android Studio – doporučeno vydání Flamingo (2022.2.1) nebo novější
 Start → File ▸ Open → vyberte kořenovou složku projektu.
 
 
-Bez diakritiky v cestě k projektu – kvůli Gradle & Android SDK.
+Bez diakritiky v cestě k projektu – kvůli Gradle a Android SDK.
 
 ## Stažení a spuštění aplikace
 Aktualní verzi aplikaci naleznete na Google Play: 
 <https://play.google.com/store/apps/details?id=com.jordan.chess>
 
-[![QR kód – Google Play](docs/qr-google-play.png)](https://play.google.com/store/apps/details?id=com.jordan.chess)
+<a href="https://play.google.com/store/apps/details?id=com.jordan.chess">
+  <img src="docs/qr-google-play.png" alt="QR kód – Google Play" width="300">
+</a>
+
 
 
 
