@@ -1,0 +1,27 @@
+apply plugin: 'kotlin'
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation project(":karballo-common")
+    testImplementation "junit:junit:4.12"
+    testImplementation "org.jetbrains.kotlin:kotlin-test"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit"
+}
+
+tasks.register('proguard', proguard.gradle.ProGuardTask) {
+    dependsOn("jar")
+    injars file("${buildDir}/libs/karballo-jvm.jar")
+    outjars file("${buildDir}/libs/karballo-obfuscated.jar")
+    libraryjars "${System.getProperty("java.home")}/lib/rt.jar"
+    optimizationpasses 5
+    allowaccessmodification()
+    dontskipnonpubliclibraryclassmembers()
+    target '1.8'
+    keep 'public class karballo.MainKt { *; }'
+    keepclassmembers 'class * extends java.lang.Enum {<fields>; public static **[] values(); public static ** valueOf(java.lang.String); }'
+}
