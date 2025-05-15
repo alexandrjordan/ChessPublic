@@ -1,4 +1,4 @@
-# Šachy – SOČ projekt  
+# Program šachy – SOČ projekt  
 Autor: **Alexandr Jordán**
 
 Studentská práce pro soutěž **Středoškolská odborná činnost (SOČ)**.  
